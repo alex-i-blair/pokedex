@@ -5,7 +5,6 @@ import { toTitle } from './utils';
 
 export default function PokemonDetail() {
   const [pokemon, setPokemon] = useState({});
-  const [name, setName] = useState('');
   const params = useParams();
 
   useEffect(() => {
@@ -15,20 +14,13 @@ export default function PokemonDetail() {
     }
     onLoad();
   }, [params.id]);
-  useEffect(() => {
-    async function onLoad() {
-      const data = await toTitle(params.pokemon);
-      setName(data);
-    }
-    onLoad();
-  }, [params.pokemon]);
 
   return (
     <>
       <Link to="/">Home</Link>
-      <div className="detail-container">
+      <section className="detail-container">
         <div className="detail-card">
-          <p>{name}</p>
+          <p>{pokemon.pokemon && toTitle(pokemon.pokemon)}</p>
           <p></p>
           <p></p>
           <p></p>
@@ -39,7 +31,7 @@ export default function PokemonDetail() {
           <p></p>
           <p></p>
         </div>
-      </div>
+      </section>
     </>
   );
 }
