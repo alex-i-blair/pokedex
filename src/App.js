@@ -7,10 +7,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route>
+        <Route exact path="/">
           <PokemonsPage />
         </Route>
-        <Route>
+        <Route exact path="/pokemon/:id">
           <PokemonDetail />
         </Route>
       </Switch>
