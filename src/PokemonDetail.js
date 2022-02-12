@@ -26,7 +26,7 @@ export default function PokemonDetail() {
       </div>
       <section className="detail-container">
         {pokemon.pokemon && (
-          <div className="detail-card">
+          <div onClick={handlePokeClick} className="detail-card">
             <div className="detail-top">
               <h1>{toTitle(pokemon.pokemon)}</h1>
               <img src={pokemon.url_image}></img>

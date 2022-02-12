@@ -13,7 +13,6 @@ function PokemonsPage() {
       const start = PER_PAGE * (page - 1) + 1;
       const end = start - 1 + PER_PAGE;
       const pokes = await getPokemon(start, end, search);
-      console.log(pokes);
       setPokemons(pokes);
     }
     fetchIt();
