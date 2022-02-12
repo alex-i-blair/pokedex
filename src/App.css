@@ -32,6 +32,68 @@ html {
   color: white;
 }
 
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: magenta; */
+}
+
+.detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: ridge whitesmoke 5px;
+  padding: 0 20px 20px;
+  margin: 50px 0;
+  background-color: rgba(43, 0, 255, 0.192);
+}
+
+.nav-home {
+  background-color: rgb(93, 190, 255);
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  font-weight: bolder;
+  padding-left: 20px;
+  height: 70px;
+  margin-top: 0;
+}
+
+.detail-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-top img {
+  margin: 0;
+  width: 300px;
+}
+
+.detail-top h1 {
+  margin: 0;
+}
+
+.detail-bottom {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  gap: 0.5rem;
+}
+
+.stat-container {
+  background-color: rgba(255, 0, 225, 0.199);
+  width: auto;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  gap: 0.5rem;
+  border: gray outset 5px;
+  padding: 0;
+  padding-left: 5px;
+}
+
 .App-link {
   color: #61dafb;
 }
